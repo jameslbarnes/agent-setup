@@ -82,7 +82,7 @@ To stop the watcher, run `register-task.ps1 -Disable`.
 - **Other people's words reach an agent with broad permissions.** The transcript holds what everyone in the meeting said, and the session runs with `bypassPermissions`. Three things guard against instructions planted in a meeting, and they are written rules, not an enforced boundary:
   - the session's prompt contains no meeting text;
   - `job.md` tells the session to treat everything in the folder as data;
-  - the first pass only captures commitments and starts follow-up sessions. Those sessions' prompts carry the meeting session's own summary of their item, with short quotes, and no transcript text. They can still open the meeting folder, so their prompt also treats meeting text as data.
+  - the first pass only captures commitments and starts follow-up sessions. Those sessions' prompts carry the meeting session's own summary of their item, which can include short quotes, but not the transcript. They can still open the full transcript in the meeting folder, so their prompt also treats meeting text as data.
 - **The machine has to be on.** After an outage, the next poll picks up notes updated since the last good poll, up to 7 days back.
 
 ## What to change for your setup
